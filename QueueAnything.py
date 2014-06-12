@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # @author Tylor Snyder
 # 
-# QueueAnything is a Queue and a function decorator alloing any 
+# QueueAnything is a Queue and a function decorator allowing any 
 #   function to be queued
 #
 
