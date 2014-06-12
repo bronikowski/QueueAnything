@@ -1,7 +1,7 @@
 QueueAnything
 =============
 
-A Queue based system for decorating functions
+A Queue based system for allowing functions into a queue
 
 Features
 ========
