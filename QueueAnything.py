@@ -3,7 +3,6 @@
 # 
 # QueueAnything is a Queue and a function decorator allowing any 
 #   function to be queued
-#
 
 import Queue
 import threading
