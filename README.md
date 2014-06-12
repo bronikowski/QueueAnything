@@ -1,7 +1,7 @@
 QueueAnything
 =============
 
-A Queue based system for allowing functions into a queue
+A python based queue based system for allowing functions into a queue
 
 Features
 ========
