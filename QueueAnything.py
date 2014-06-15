@@ -39,6 +39,7 @@ if __name__ == "__main__":
     
     import time
     import random
+    
     @queuedFunction
     def waitlongprint(text):
         """
