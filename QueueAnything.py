@@ -35,30 +35,8 @@ class AnyQueue(threading.Thread):
             except:
                 break
 
-if __name__ == "__main__":
-    
-    import time
-    import random
-    
-    @queuedFunction
-    def waitlongprint(text):
-        """
-        Sample function for queue
-        """
-        print "waiting on %s" % text
-        time.sleep(random.randint(1,10))
-        print text
 
-    waitlongprint("test1")
-    waitlongprint("test2")
-    waitlongprint("test3")
-    waitlongprint("test4")
-    waitlongprint("test5")
-    waitlongprint("test6")
-    waitlongprint("test7")
-    waitlongprint("test8")
-    waitlongprint("test9")
-    waitlongprint("test0")
+def start():
     for x in range(WORKERS):
         AnyQueue(q).start()
 
