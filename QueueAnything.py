@@ -1,14 +1,15 @@
 #!/usr/bin/env python
 # @author Tylor Snyder
-# 
-# QueueAnything is a Queue and a function decorator allowing any 
+#
+# QueueAnything is a Queue and a function decorator allowing any
 #   function to be queued
 
 import Queue
 import threading
 
 q = Queue.Queue()
-WORKERS=7
+WORKERS = 7
+
 
 def queuedFunction(func):
     """
@@ -16,13 +17,16 @@ def queuedFunction(func):
     """
     def inner(*args, **kwargs):
         q.put((func, args, kwargs))
-    
+
     return inner
-    
+
+
 class AnyQueue(threading.Thread):
+
     """
     AnyQueue class that recieves a function from a queue and runs it
     """
+
     def __init__(self, queue):
         self.queue = queue
         threading.Thread.__init__(self)
@@ -39,5 +43,3 @@ class AnyQueue(threading.Thread):
 def start():
     for x in range(WORKERS):
         AnyQueue(q).start()
-
-
