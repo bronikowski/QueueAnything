@@ -32,7 +32,7 @@ class AnyQueue(threading.Thread):
             try:
                 (function, args, kwargs) = self.queue.get_nowait()
                 function(*args, **kwargs)
-            except:
+            except Queue.Empty:
                 break
 
 
