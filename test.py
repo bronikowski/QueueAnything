@@ -2,10 +2,8 @@
 import time
 import random
 import QueueAnything
-from QueueAnything import queuedFunction
 
-
-@queuedFunction
+@QueueAnything.queued
 def waitprint(data):
     waittime = random.randint(1, 10)
     time.sleep(waittime)
@@ -14,7 +12,7 @@ def waitprint(data):
 
 class ClassTest():
 
-    @queuedFunction
+    @QueueAnything.queued
     def decorator_printit(self, data):
         waittime = random.randint(1, 10)
         time.sleep(waittime)
@@ -38,7 +36,7 @@ if __name__ == "__main__":
     x.decorator_printit("three")
     x.decorator_printit("four")
 
-    x.printit = queuedFunction(x.printit)
+    x.printit = QueueAnything.queued(x.printit)
     x.printit("one")
     x.printit("two")
     x.printit("three")

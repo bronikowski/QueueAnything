@@ -10,8 +10,7 @@ import threading
 q = Queue.Queue()
 WORKERS = 7
 
-
-def queuedFunction(func):
+def queued(func):
     """
     Function decorator that places function in the queue
     """
